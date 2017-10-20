@@ -2,7 +2,6 @@ import re
 import requests
 
 
-
 res = requests.get(r"http://news.ncu.edu.cn/")
 res.encoding = "utf-8"
 news_titles1 = re.findall(r'<li.*?><a.*?>(.*)<\/a><span.*?>.*?<\/span><\/li>',str(res.text))
